@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1739882752561,
+      "tag": "0000_majestic_thena",
+      "breakpoints": true
+    }
+  ]
+}
