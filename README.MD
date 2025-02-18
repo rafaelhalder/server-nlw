@@ -5,3 +5,5 @@
   npm i @fastify/cors 
   npm i zod
   npm  i fastify-type-provider-zod
+  npm i @fastify/swagger @fastify/swagger-ui
+   npm i @biomejs/biome -D

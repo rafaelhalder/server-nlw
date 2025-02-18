@@ -1,21 +1,36 @@
-import {fastify} from "fastify";
-import {fastifyCors} from '@fastify/cors'
+import { fastifyCors } from '@fastify/cors'
+import { fastifySwagger } from '@fastify/swagger'
+import { fastifySwaggerUi } from '@fastify/swagger-ui'
+import { fastify } from 'fastify'
 import {
+  type ZodTypeProvider,
+  jsonSchemaTransform,
+  serializerCompiler,
   validatorCompiler,
-  serializerCompiler
 } from 'fastify-type-provider-zod'
+import { env } from './env'
+import { subscribeToEventRoute } from './routes/subscribe-to-event-route'
 
-const app = fastify()
+const app = fastify().withTypeProvider<ZodTypeProvider>()
 
 app.setSerializerCompiler(serializerCompiler)
 app.setValidatorCompiler(validatorCompiler)
-app.register(fastifyCors,{
-  origin: true
-})
-app.get('/hello',() => {
-return "hello"
+app.register(fastifyCors)
+app.register(fastifySwagger, {
+  openapi: {
+    info: {
+      title: 'NLW',
+      version: '0.0.1',
+    },
+  },
+  transform: jsonSchemaTransform,
 })
 
-app.listen({port: 3333}).then(()=> {
-  console.log("HTTP server running")
+app.register(fastifySwaggerUi, {
+  routePrefix: '/docs',
+})
+app.register(subscribeToEventRoute)
+
+app.listen({ port: env.PORT }).then(() => {
+  console.log('HTTP server running')
 })
