@@ -3,19 +3,21 @@ import {
 } from "./chunk-S4VBCYJX.mjs";
 import {
   env
-} from "./chunk-QEITFZL7.mjs";
+} from "./chunk-MHMENDYQ.mjs";
 
 // src/drizzle/client.ts
-import postgres from "postgres";
 import { drizzle } from "drizzle-orm/postgres-js";
-var pg = postgres(env.POSTGRES_URL);
-var db = drizzle(pg, {
+import postgres from "postgres";
+var client = postgres(env.POSTGRES_URL, {
+  ssl: "require",
+  max: 1
+});
+var db = drizzle(client, {
   schema: {
     subscriptions
   }
 });
 
 export {
-  pg,
   db
 };

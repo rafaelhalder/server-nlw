@@ -1,6 +1,6 @@
 import {
   getSubscriberInviteClicks
-} from "./chunk-D3NG5TR6.mjs";
+} from "./chunk-Z4H2SF5A.mjs";
 
 // src/routes/get-subscriber-invite-clicks-route.ts
 import { z } from "zod";

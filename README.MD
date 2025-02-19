@@ -111,3 +111,9 @@ Runs the server with environment variables from the `.env` file.
 ```
 
 ```
+
+npx drizzle-kit introspect
+Testa a conexão com o banco de dados
+
+npx drizzle-kit migrate
+Migrar as configs para criar as tabelas passadas

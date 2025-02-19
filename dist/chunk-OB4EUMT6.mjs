@@ -1,6 +1,6 @@
 import {
   subscribeToEvent
-} from "./chunk-NNN5BUNS.mjs";
+} from "./chunk-XVNCLVSW.mjs";
 
 // src/routes/subscribe-to-event-route.ts
 import { z } from "zod";
