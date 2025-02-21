@@ -1,33 +1,33 @@
 import {
   accessInviteLinkRoute
-} from "./chunk-DKXZNXVC.mjs";
+} from "./chunk-UQ5QKVGD.mjs";
 import {
   getRankingRoute
-} from "./chunk-3IJ6ISNZ.mjs";
+} from "./chunk-QOWD7RX7.mjs";
 import {
   getSubscriberRankingPositionRoute
-} from "./chunk-SDBUS3UJ.mjs";
+} from "./chunk-UBFR5M6A.mjs";
 import {
   getSubscriberInviteClicksRoute
-} from "./chunk-IV7THRSB.mjs";
+} from "./chunk-XVASJW34.mjs";
 import {
   getSubscriberInviteCountRoute
-} from "./chunk-RKWKJG4N.mjs";
+} from "./chunk-QTWPAVJB.mjs";
 import {
   subscribeToEventRoute
-} from "./chunk-OB4EUMT6.mjs";
-import "./chunk-XVNCLVSW.mjs";
-import "./chunk-RWIXWG2N.mjs";
-import "./chunk-4PEDE7ES.mjs";
-import "./chunk-PLLGCIKU.mjs";
+} from "./chunk-I4DBJWPY.mjs";
+import "./chunk-S7KPLQOU.mjs";
+import "./chunk-5EBOBK5J.mjs";
+import "./chunk-VO3VXNUV.mjs";
+import "./chunk-GUSWWVQ2.mjs";
 import "./chunk-S4VBCYJX.mjs";
-import "./chunk-Z4H2SF5A.mjs";
-import "./chunk-WYPAUTZH.mjs";
-import "./chunk-22EUUXFV.mjs";
-import "./chunk-XMUR6WN6.mjs";
+import "./chunk-66IKTDIB.mjs";
+import "./chunk-5REWGREJ.mjs";
+import "./chunk-HTLELMYF.mjs";
+import "./chunk-CCICAGWA.mjs";
 import {
   env
-} from "./chunk-MHMENDYQ.mjs";
+} from "./chunk-SDWNZVBA.mjs";
 
 // src/server.ts
 import { fastifyCors } from "@fastify/cors";
@@ -57,10 +57,10 @@ app.register(fastifySwaggerUi, {
 });
 app.register(subscribeToEventRoute);
 app.register(accessInviteLinkRoute);
-app.register(getSubscriberInviteClicksRoute);
-app.register(getSubscriberInviteCountRoute);
-app.register(getSubscriberRankingPositionRoute);
 app.register(getRankingRoute);
-app.listen({ port: env.PORT }).then(() => {
+app.register(getSubscriberInviteCountRoute);
+app.register(getSubscriberInviteClicksRoute);
+app.register(getSubscriberRankingPositionRoute);
+app.listen({ port: env.PORT, host: "0.0.0.0" }).then(() => {
   console.log("HTTP server running");
 });

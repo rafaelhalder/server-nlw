@@ -1,6 +1,6 @@
 import {
   getRanking
-} from "./chunk-4PEDE7ES.mjs";
+} from "./chunk-VO3VXNUV.mjs";
 
 // src/routes/get-ranking-route.ts
 import { z } from "zod";

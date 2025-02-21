@@ -1,9 +1,9 @@
 import {
   accessInviteLink
-} from "./chunk-RWIXWG2N.mjs";
+} from "./chunk-5EBOBK5J.mjs";
 import {
   env
-} from "./chunk-MHMENDYQ.mjs";
+} from "./chunk-SDWNZVBA.mjs";
 
 // src/routes/access-invite-link-route.ts
 import { z } from "zod";
@@ -13,12 +13,13 @@ var accessInviteLinkRoute = async (app) => {
     {
       schema: {
         summary: "Access invite link and redirects users",
-        tags: ["referal"],
+        operationId: "accessInviteLink",
+        tags: ["referral"],
         params: z.object({
           subscriberId: z.string()
         }),
         response: {
-          302: z.null()
+          301: z.null()
         }
       }
     },
