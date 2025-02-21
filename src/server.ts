@@ -36,10 +36,10 @@ app.register(fastifySwaggerUi, {
 })
 app.register(subscribeToEventRoute)
 app.register(accessInviteLinkRoute)
-app.register(getSubscriberInviteClicksRoute)
-app.register(getSubscriberInviteCountRoute)
-app.register(getSubscriberRankingPositionRoute)
 app.register(getRankingRoute)
+app.register(getSubscriberInviteCountRoute)
+app.register(getSubscriberInviteClicksRoute)
+app.register(getSubscriberRankingPositionRoute)
 
 app.listen({ port: env.PORT, host: '0.0.0.0' }).then(() => {
   console.log('HTTP server running')
