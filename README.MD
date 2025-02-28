@@ -117,3 +117,5 @@ Testa a conexão com o banco de dados
 
 npx drizzle-kit migrate
 Migrar as configs para criar as tabelas passadas
+
+npm i ai @ai-sdk/openai

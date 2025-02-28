@@ -10,7 +10,7 @@ import { subscriptions } from './schema/subscriptions'
 //   }
 // })
 
-const client = postgres(env.POSTGRES_URL, {
+export const client = postgres(env.POSTGRES_URL, {
   ssl: 'require',
   max: 1,
 })
