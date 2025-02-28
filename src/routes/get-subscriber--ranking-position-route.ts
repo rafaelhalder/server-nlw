@@ -14,7 +14,7 @@ export const getSubscriberRankingPositionRoute: FastifyPluginAsyncZod =
             subscriberId: z.string(),
           }),
           response: {
-            200: z.object({ position: z.number().nullable() }),
+            200: z.object({ position: z.number() }),
           },
         },
       },
